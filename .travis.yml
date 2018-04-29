@@ -10,9 +10,6 @@ r:
 - release
 - devel
 
-before_install:
-  - cd subdirectory
-
 install:
 - R -e 'devtools::install_deps(dep = T)'
 
