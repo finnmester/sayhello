@@ -1,0 +1,24 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: R
+sudo: false
+cache: packages
+
+r:
+- 3.4
+- oldrel
+- release
+- devel
+
+before_install:
+  - cd subdirectory
+
+install:
+- R -e 'devtools::install_deps(dep = T)'
+
+script:
+- R CMD build .
+- R CMD check *tar.g
+
+after_success:
+  - Rscript -e 'covr::codecov()'
