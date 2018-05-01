@@ -5,8 +5,8 @@
 hello()
 }
 \description{
-Prints 'Hello, world!'.
+Prints  "Hello John !"
 }
 \examples{
-hello()
+hello(name = "John")
 }

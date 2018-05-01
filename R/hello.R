@@ -1,11 +1,11 @@
 #' Hello Function
 #'
-#' @param name - Name to insert, character type.
+#' @param name Name to insert, character type.
 #'
-#' @return - Print message based on the input.
+#' @return Print message based on the input.
 #' @export
 #'
-#' @examples hello('Filipe')
+#' @examples hello(name = "John")
 hello <- function(name) {
     if(is.character(name)){
         print(paste('Hello',name,'!'))
